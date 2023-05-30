@@ -1,0 +1,14 @@
+- name: Deploy myapp
+  hosts: web_servers
+  roles:
+    - web_server
+
+- name: Deploy myapp
+  hosts: app_servers
+  roles:
+    - application_server
+
+- name: Deploy myapp
+  hosts: db_servers
+  roles:
+    - database_server

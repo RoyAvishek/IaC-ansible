@@ -1,0 +1,14 @@
+---
+# tasks file for web-server
+
+- name: Install and configure Nginx
+  apt:
+    name: nginx
+    state: present
+
+- name: Copy Nginx configuration file
+  copy:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
+
+

@@ -1,0 +1,14 @@
+---
+#tasks file for app-server
+
+- name: Install Java runtime
+  apt:
+    name: openjdk-8-jre
+    state: present
+
+- name: Deploy application WAR file
+  copy:
+    src: myapp.war
+    dest: /opt/myapp/myapp.war
+
+

@@ -1,0 +1,19 @@
+---
+# tasks file for db-server
+
+- name: Install and configure PostgreSQL
+  apt:
+    name: postgresql
+    state: present
+
+- name: Create database and user
+  postgresql_db:
+    name: mydb
+    state: present
+
+  postgresql_user:
+    name: myuser
+    password: mypassword
+    db: mydb
+    state: present
+
